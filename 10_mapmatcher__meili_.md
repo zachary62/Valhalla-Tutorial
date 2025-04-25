@@ -21,29 +21,29 @@ GPS data is fantastic, but it's rarely perfect. When you record a drive, you mig
 
 ```mermaid
 graph TD
-    subgraph Actual Road
+    subgraph Actual_Road
         direction LR
         R1 --- R2 --- R3 --- R4 --- R5
     end
-    subgraph GPS Trace
+    subgraph GPS_Trace
         direction LR
         G1 --- G2 --- G3 --- G4 --- G5
     end
 
-    style R1 fill:#eee,stroke:#333,stroke-width:4px
-    style R2 fill:#eee,stroke:#333,stroke-width:4px
-    style R3 fill:#eee,stroke:#333,stroke-width:4px
-    style R4 fill:#eee,stroke:#333,stroke-width:4px
-    style R5 fill:#eee,stroke:#333,stroke-width:4px
+    R1:::roadStyle
+    R2:::roadStyle
+    R3:::roadStyle
+    R4:::roadStyle
+    R5:::roadStyle
 
-    style G1 fill:#f9f,stroke:#f0f
-    style G2 fill:#f9f,stroke:#f0f
-    style G3 fill:#f9f,stroke:#f0f
-    style G4 fill:#f9f,stroke:#f0f
-    style G5 fill:#f9f,stroke:#f0f
+    G1:::gpsStyle
+    G2:::gpsStyle
+    G3:::gpsStyle
+    G4:::gpsStyle
+    G5:::gpsStyle
 
-    linkStyle 0,1,2,3,4,5,6,7,8 stroke-width:2px, stroke:#ccc
-    linkStyle 9,10,11,12 stroke-width:2px, stroke:#f0f, stroke-dasharray: 5 5
+    classDef roadStyle fill:#eee,stroke:#333,stroke-width:4px
+    classDef gpsStyle fill:#f9f,stroke:#f0f
 ```
 
 *The blue line represents the actual road, while the pink dashed line is the noisy GPS trace.*
